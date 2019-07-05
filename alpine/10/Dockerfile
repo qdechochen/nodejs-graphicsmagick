@@ -5,3 +5,4 @@ RUN set -ex; \
     apk add -U tzdata; \
     apk --update add graphicsmagick; \
     rm -rf /var/cache/apk/*
+ENTRYPOINT [ "sh", "-c", "cp /usr/share/zoneinfo/$TIMEZONE /etc/localtime" ]
