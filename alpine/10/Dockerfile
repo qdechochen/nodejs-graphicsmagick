@@ -4,8 +4,8 @@ ENV TIMEZONE UCT
 RUN set -ex; \
     apk add -U tzdata; \
     cp /usr/share/zoneinfo/$TIMEZONE /etc/localtime; \
-    apk del tzdata \
-RUN apk --update add graphicsmagick && \
+    apk del tzdata; \
+    apk --update add graphicsmagick; \
     rm -rf /var/cache/apk/*
 
 
