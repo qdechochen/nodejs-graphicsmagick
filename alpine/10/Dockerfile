@@ -3,7 +3,7 @@ LABEL maintainer="Echo Chen<qdechochen@gmail.com>"
 ENV TIMEZONE UCT
 RUN apk add -U tzdata; \
     cp /usr/share/zoneinfo/$TIMEZONE /etc/localtime; \
-    apk del tzdata; \
+    apk del tzdata \
 RUN apk --update add graphicsmagick && \
     rm -rf /var/cache/apk/*
 
